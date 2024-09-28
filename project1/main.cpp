@@ -1,22 +1,56 @@
+#include "deposit.h"
+#include "withdrawal.h"
 #include <iostream>
 using namespace std;
-int year;
-bool leapyear;
-int main() {
- 
-     // Boolean variable to store the result
-    cout << "Enter a year: ";
-    cin >> year;
+double myBalance;
+double myDeposit;
+double myWithdrawal;
+string myUsername;
+double Choice;
 
-    // Determine if it's a leap year using the boolean variable
-    leapyear = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
-    // Output based on the value of leapyear
-    if (leapyear) {
-        cout << year << " is a leap year." << endl;
+int main() 
+{
+    cout << "What is your name? " << endl;
+    cin >> myUsername;
+    cout << "Hello " << myUsername << endl;
+    cout << "What is your balance? " << endl;
+    cin >> myBalance;
+    cout << "Your account balance is " << myBalance << endl;
+    cout << "1) Make a Deposit \n2) Make a Withdrawal" << endl;
+    cin >> Choice;
+    if (Choice == 1) {
+        cout << "What is your deposit?" << endl;
+        cin >> myDeposit;
+        if (myDeposit <= 0) {
+            cout << "Deposit amount is invalid. Please input a positive deposit amount." << endl;
+        }
+        else {
+            cout << "Your new balance is " << deposit(myBalance, myDeposit) << endl;
+        }
     }
-    else {
-        cout << year << " is not a leap year." << endl;
+    else if (Choice == 2) {
+        cout << "What is your Withdrawal?" << endl;
+        cin >> myWithdrawal;
+        if (myWithdrawal >= myBalance && myWithdrawal > 0) {
+            cout << "Insufficient funds. Please withdraw a valid amount." << endl;
+        }
+        else {
+            cout << "Your new balance is " << withdrawal(myBalance, myWithdrawal) << endl;
+        }
     }
+
+    
+    
     return 0;
 }
+
+
+
+
+
+
+
+
+
+  
