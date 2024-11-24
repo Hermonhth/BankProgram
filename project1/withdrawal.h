@@ -1,2 +1,4 @@
 #pragma once
-int withdrawal(double withdrawalvalue, double balancevalue);
+double withdrawal(double& withdrawalValue,
+	double& balanceValue);
+

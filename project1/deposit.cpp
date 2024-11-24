@@ -1,6 +1,10 @@
 #include "deposit.h"
 
-int deposit(double depositvalue, double balancevalue)
-{
-	return balancevalue + depositvalue;
+double deposit(double& depositValue,
+    double& balanceValue) {
+    if (depositValue <= 0) {
+        return balanceValue; 
+    }
+    balanceValue += depositValue;
+    return balanceValue;
 }

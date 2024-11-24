@@ -1,2 +1,4 @@
 #pragma once
-int deposit(double depositvalue, double balancevalue);
+
+double deposit(double& depositValue,
+	double& balanceValue);
