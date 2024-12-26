@@ -24,7 +24,7 @@
     <ProjectGuid>{b1b31e84-1495-4b21-a6c1-73c6095de4ba}</ProjectGuid>
     <RootNamespace>project1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Project1</ProjectName>
+    <ProjectName>Bank Program</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -135,6 +135,10 @@
   <ItemGroup>
     <ClInclude Include="deposit.h" />
     <ClInclude Include="withdrawal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="deposits.txt" />
+    <Text Include="withdrawals.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

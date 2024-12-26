@@ -33,4 +33,8 @@
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="deposits.txt" />
+    <Text Include="withdrawals.txt" />
+  </ItemGroup>
 </Project>
